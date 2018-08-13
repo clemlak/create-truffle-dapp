@@ -23,7 +23,7 @@ contract _project_placeholder_ {
      * @dev Returns the stored number
      * @return The number as an uint
      */
-    function getNumber() public constant {
+    function getNumber() public constant returns (uint) {
         return number;
     }
 }
