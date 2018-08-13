@@ -1,0 +1,27 @@
+{
+  "name": "create-truffle-dapp",
+  "version": "0.1.0",
+  "description": "Truffle projects configuration made easy!",
+  "bin": {
+    "create-truffle-dapp": "./createTruffleDapp.js"
+  },
+  "files": [
+    "createTruffleDapp.js"
+  ],
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "clemlak",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.0.0",
+    "node-cmd": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
