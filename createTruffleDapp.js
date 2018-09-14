@@ -49,7 +49,7 @@ const questions = [
 ];
 
 /* Say hello! */
-console.log(`\nHello! Welcome to ${chalk.blue('create-truffle-dapp')}!\n`);
+console.log(`\nWelcome to ${chalk.blue('create-truffle-dapp')}!\n`);
 
 /* We ask the questions */
 inquirer.prompt(questions).then((answers) => {
@@ -221,11 +221,13 @@ inquirer.prompt(questions).then((answers) => {
         `, (cmdError, res, stderr) => {
           console.log(res);
 
-          console.log(`\nSuccess! Created ${chalk.green(projectName)} at ${chalk.green(projectDirectory)}\n\n`);
-          console.log(`Inside the ${chalk.green(projectName)} directory, you can run:\n`);
-          console.log(`${chalk.magenta('truffle test')}\nTo test your contracts\n\n`);
-          console.log(`${chalk.magenta('truffle compile')}\nTo compile your dapp\n\n`);
-          console.log(`${chalk.magenta('truffle migrate')}\nTo migrate your dapp\n\n`);
+          console.log(`Success! Created ${chalk.green(projectName)} at ${chalk.green(projectDirectory)}.\n`);
+          console.log(`Go to the ${chalk.green(projectName)} project directory with ${chalk.magenta(`cd ${projectName}`)}!`);
+          console.log('Inside this directory, you can run commands like:\n');
+          console.log(`${chalk.magenta('npm install openzeppelin-solidity')}\nTo install a package...\n\n`);
+          console.log(`${chalk.magenta('truffle test')}\nTo test your dapp...\n\n`);
+          console.log(`${chalk.magenta('truffle compile')}\nTo compile your dapp...\n\n`);
+          console.log(`${chalk.magenta('truffle migrate')}\nTo migrate your dapp...\n\n`);
           console.log('Happy coding! :)');
         });
       });

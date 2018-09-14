@@ -4,8 +4,7 @@ pragma solidity 0.4.24;
 
 /**
  * @title Base contract for _project_placeholder_
- * @notice Say something!
- * @dev Any additional information
+ * @dev Say something here!
  */
 contract _project_placeholder_ {
     /* A variable */
@@ -13,17 +12,17 @@ contract _project_placeholder_ {
 
     /**
      * @dev Sets the number
-     * @param newNumber The new number to be stored
+     * @param newNumber The new number to store
      */
-    function setNumber(uint newNumber) public {
+    function setNumber(uint newNumber) external {
         number = newNumber;
     }
 
     /**
-     * @dev Returns the stored number
+     * @dev Gets the stored number
      * @return The number as an uint
      */
-    function getNumber() public constant returns (uint) {
+    function getNumber() external view returns (uint) {
         return number;
     }
 }

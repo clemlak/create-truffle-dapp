@@ -10,10 +10,10 @@ contract('_project_placeholder_', (accounts) => {
     instance = contractInstance;
   }));
 
-  it('Should set the number', () => instance.setNumber(2).then(() => {
-  }));
+  it('Should set the number', () => instance.setNumber(2));
 
-  it('Should get the number', () => instance.getNumber().then((number) => {
-    assert.equal(number.toNumber(), 2, 'Number is wrong!');
-  }));
+  it('Should get the number', () => instance.getNumber()
+    .then((number) => {
+      assert.equal(number.toNumber(), 2, 'Number is wrong!');
+    }));
 });
