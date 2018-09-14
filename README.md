@@ -33,7 +33,11 @@ Once the installation is done, you can open your project with:
 cd MyDapp
 ```
 
-Then you can run any commands like `npm install openzeppelin-solidity`, `truffle test`, `truffle compile` or `truffle migrate`.
+Then you will be able to run any commands like `npm install openzeppelin-solidity`, `truffle test`, `truffle compile`.
+
+Once you are done with your code, simply run `truffle migrate --network rinkeby` (or any network) to deploy it!
+
+*Warning: Please double-check the gas amount and the gas price in the `truffle.js` file before any deployment!*
 
 ## Contribute
 
