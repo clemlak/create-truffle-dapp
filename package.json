@@ -1,6 +1,6 @@
 {
   "name": "create-truffle-dapp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create and deploy Truffle projects with no configuration.",
   "bin": {
     "create-truffle-dapp": "./createTruffleDapp.js"
