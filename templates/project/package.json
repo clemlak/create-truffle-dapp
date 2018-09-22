@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "dotenv": "^6.0.0",
+    "truffle-assertions": "^0.4.0",
     "truffle-hdwallet-provider": "0.0.5"
   }
 }

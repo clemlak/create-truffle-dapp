@@ -1,19 +1,36 @@
 /* eslint-env node, mocha */
 /* global artifacts, contract, it, assert */
 
+const truffleAssert = require('truffle-assertions');
+
 const _project_placeholder_ = artifacts.require('_project_placeholder_');
 
-let instance;
-
 contract('_project_placeholder_', (accounts) => {
-  it('Should deploy an instance of the _project_placeholder_ contract', () => _project_placeholder_.deployed().then((contractInstance) => {
-    instance = contractInstance;
-  }));
+  let instance;
 
-  it('Should set the number', () => instance.setNumber(2));
+  beforeEach(async () => {
+    instance = await _project_placeholder_.deployed();
+  });
 
-  it('Should get the number', () => instance.getNumber()
-    .then((number) => {
-      assert.equal(number.toNumber(), 2, 'Number is wrong!');
-    }));
+  it('Should set the number', async () => {
+    // given
+    const newNumber = 2;
+
+    // when
+    const result = await instance.setNumber(newNumber);
+
+    // then
+    truffleAssert.eventEmitted(result, 'Set', ev => ev.number.toNumber() === newNumber);
+  });
+
+  it('Should get the number', async () => {
+    // given
+    const expectedNumber = 2;
+
+    // when
+    const number = await instance.getNumber();
+
+    // then
+    assert.equal(number.toNumber(), expectedNumber, 'Number is wrong!');
+  });
 });
