@@ -21,11 +21,11 @@ const questions = [
   {
     type: 'confirm',
     name: 'infura_setup',
-    message: 'Do you want to set an Infura API key?',
+    message: 'Do you want to use an Infura project ID?',
   }, {
     type: 'input',
-    name: 'infura_api_key',
-    message: 'Please enter your Infura API key:',
+    name: 'infura_project_id',
+    message: 'Please enter your Infura project ID:',
     when(answers) {
       return answers.infura_setup;
     },
@@ -163,7 +163,7 @@ inquirer.prompt(questions).then((answers) => {
       }
 
       if (answers.infura_setup) {
-        buf = buf.replace(/_infura_api_key_placeholder_/g, answers.infura_api_key);
+        buf = buf.replace(/_infura_project_id_placeholder_/g, answers.infura_project_id);
       }
 
       fs.writeFile(`${projectName}/.env`, buf, (error) => {
@@ -213,7 +213,7 @@ inquirer.prompt(questions).then((answers) => {
         }
 
         console.log('Installing packages. This might take a couple of minutes.');
-        console.log(`Installing ${chalk.blue('dotenv')} and ${chalk.blue('truffle-hdwallet-provider')}...\n`);
+        console.log(`Installing ${chalk.blue('dotenv')}, ${chalk.blue('truffle-hdwallet-provider')} and ${chalk.blue('web3')}...\n`);
 
         cmd.get(`
           cd ${projectName}
