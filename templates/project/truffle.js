@@ -2,10 +2,10 @@ require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 
-const mainnetUrl = `https://mainnet.infura.io/${process.env.INFURA}`;
-const ropstenUrl = `https://ropsten.infura.io/${process.env.INFURA}`;
-const rinkebyUrl = `https://rinkeby.infura.io/${process.env.INFURA}`;
-const kovanUrl = `https://kovan.infura.io/${process.env.INFURA}`;
+const mainnetUrl = `https://mainnet.infura.io/v3/${process.env.INFURA}`;
+const ropstenUrl = `https://ropsten.infura.io/v3/${process.env.INFURA}`;
+const rinkebyUrl = `https://rinkeby.infura.io/v3/${process.env.INFURA}`;
+const kovanUrl = `https://kovan.infura.io/v3/${process.env.INFURA}`;
 
 module.exports = {
   networks: {
