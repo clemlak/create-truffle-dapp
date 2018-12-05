@@ -11,7 +11,9 @@ contract('_project_placeholder_', (accounts) => {
       instance = contractInstance;
     }));
 
-  it('Should set the number', () => instance.setNumber(2));
+  it('Should set the number', () => instance.setNumber(2, {
+    from: accounts[0],
+  }));
 
   it('Should get the number', () => instance.getNumber()
     .then((number) => {
