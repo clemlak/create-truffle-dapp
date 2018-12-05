@@ -1,9 +1,11 @@
 # Create Truffle Dapp
+
 ## Introduction
+
 The goal of Create Truffle Dapp is to allow developers to create and deploy Truffle projects with no configuration. Create Truffle Dapp will:
 
  - Create your Truffle project, with a template contract, a test file and the corresponding migrations files
- - Create a ready-to-use deployment file using your [Infura](https://infura.io/) API key and a mnemonic.
+ - Create a ready-to-use deployment file using your [Infura](https://infura.io/) API key and a mnemonic (soon to be updated to Infura projects)
 
 *A Solidity linter ([Solhint](https://github.com/protofire/solhint) or [Solium](https://github.com/duaraghav8/Solium)) configuration file can also be created.*
 
@@ -18,7 +20,7 @@ Install Create Truffle Dapp globally with:
 
     npm install -g create-truffle-dapp
 
-*Macos users may need to start this command with `sudo` and enter their password.*
+*Some users may need to start this command with `sudo` and enter their password.*
 
 ## Usage
 To create a new project in the current directory, simply run:
@@ -38,6 +40,15 @@ Then you will be able to run any commands like `npm install openzeppelin-solidit
 Once you are done with your code, simply run `truffle migrate --network rinkeby` (or any network) to deploy it!
 
 *Warning: Please double-check the gas amount and the gas price in the `truffle.js` file before any deployment!*
+
+
+## Beta
+
+Beta version may be installed using
+
+```
+npm install -g create-truffle-dapp@beta
+```
 
 ## Contribute
 
