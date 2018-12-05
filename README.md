@@ -44,11 +44,21 @@ Once you are done with your code, simply run `truffle migrate --network rinkeby`
 
 ## Beta
 
-Beta version may be installed using
+Beta version may be installed using:
 
 ```
 npm install -g create-truffle-dapp@beta
 ```
+
+Some possible future features will be:
+* Migration to Truffle 5
+* Migration to Solidity 0.5.0
+* Vyper support
+* Migration to the new Infura API access
+* Automatic custom Ganache ianstance
+* Preconfigured projects?
+* Solidity flattener
+* Solidity docs generator
 
 ## Contribute
 
