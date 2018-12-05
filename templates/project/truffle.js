@@ -1,7 +1,6 @@
 require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider');
-
-const web3 = require('web3');
+const Web3 = require('web3');
 
 const mainnetUrl = `https://mainnet.infura.io/${process.env.INFURA}`;
 const ropstenUrl = `https://ropsten.infura.io/${process.env.INFURA}`;
@@ -15,14 +14,14 @@ module.exports = {
       port: 8545,
       network_id: '*',
       gas: 8000000,
-      gasPrice: web3.utils.toWei('2', 'gwei'),
+      gasPrice: Web3.utils.toWei('2', 'gwei'),
     },
     ropsten: {
       provider() {
         return new HDWalletProvider(process.env.MNEMONIC, ropstenUrl, 0);
       },
       network_id: 3,
-      gasPrice: web3.utils.toWei('50', 'gwei'),
+      gasPrice: Web3.utils.toWei('50', 'gwei'),
       gas: 8000000,
     },
     rinkeby: {
@@ -30,7 +29,7 @@ module.exports = {
         return new HDWalletProvider(process.env.MNEMONIC, rinkebyUrl, 0);
       },
       network_id: 4,
-      gasPrice: web3.utils.toWei('2', 'gwei'),
+      gasPrice: Web3.utils.toWei('2', 'gwei'),
       gas: 7000000,
     },
     kovan: {
@@ -38,7 +37,7 @@ module.exports = {
         return new HDWalletProvider(process.env.MNEMONIC, kovanUrl, 0);
       },
       network_id: 42,
-      gasPrice: web3.utils.toWei('2', 'gwei'),
+      gasPrice: Web3.utils.toWei('2', 'gwei'),
       gas: 8000000,
     },
     live: {
@@ -46,7 +45,7 @@ module.exports = {
         return new HDWalletProvider(process.env.MNEMONIC, mainnetUrl, 0);
       },
       network_id: 1,
-      gasPrice: web3.utils.toWei('2', 'gwei'),
+      gasPrice: Web3.utils.toWei('2', 'gwei'),
       gas: 8000000,
     },
   },
