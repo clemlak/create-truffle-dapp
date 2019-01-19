@@ -21,7 +21,7 @@ module.exports = {
         return new HDWalletProvider(process.env.MNEMONIC, ropstenUrl, 0);
       },
       network_id: 3,
-      gasPrice: Web3.utils.toWei('50', 'gwei'),
+      gasPrice: Web3.utils.toWei('2', 'gwei'),
       gas: 8000000,
     },
     rinkeby: {
