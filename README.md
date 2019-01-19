@@ -1,9 +1,11 @@
 # Create Truffle Dapp
+
 ## Introduction
+
 The goal of Create Truffle Dapp is to allow developers to create and deploy Truffle projects with no configuration. Create Truffle Dapp will:
 
  - Create your Truffle project, with a template contract, a test file and the corresponding migrations files
- - Create a ready-to-use deployment file using your [Infura](https://infura.io/) API key and a mnemonic.
+ - Create a ready-to-use deployment file using your [Infura](https://infura.io/) project ID and a wallet mnemonic
 
 *A Solidity linter ([Solhint](https://github.com/protofire/solhint) or [Solium](https://github.com/duaraghav8/Solium)) configuration file can also be created.*
 
@@ -18,14 +20,14 @@ Install Create Truffle Dapp globally with:
 
     npm install -g create-truffle-dapp
 
-*Macos users may need to start this command with `sudo` and enter their password.*
+*Some users may need to start this command with `sudo` and enter their password.*
 
 ## Usage
 To create a new project in the current directory, simply run:
 
     create-truffle-dapp MyDapp
 
-Create Truffle Dapp will then ask you if you want to set an Infura API key, a mnemonic and if you want to use a Solidity linter. All of these steps are optional and you will be able to change or install things later.
+Create Truffle Dapp will then ask you if you want to set an Infura project ID, a mnemonic and if you want to use a Solidity linter. All of these steps are optional and you will be able to change or install things later.
 
 Once the installation is done, you can open your project with:
 

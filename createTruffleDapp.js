@@ -21,11 +21,11 @@ const questions = [
   {
     type: 'confirm',
     name: 'infura_setup',
-    message: 'Do you want to set an Infura API key?',
+    message: 'Do you want to set an Infura project ID?',
   }, {
     type: 'input',
-    name: 'infura_api_key',
-    message: 'Please enter your Infura API key:',
+    name: 'infura_project_id',
+    message: 'Please enter your Infura project ID:',
     when(answers) {
       return answers.infura_setup;
     },
@@ -53,7 +53,7 @@ console.log(`\nWelcome to ${chalk.blue('create-truffle-dapp')}!\n`);
 
 /* We ask the questions */
 inquirer.prompt(questions).then((answers) => {
-  console.log(`\nCreating ${chalk.green(projectName)} in ${chalk.green(projectDirectory)}.\n`);
+  console.log(`\nCreating ${chalk.green(projectName)} in ${chalk.green(projectDirectory)}...\n`);
 
   /* Creates the folder for the project */
   cmd.get(`mkdir ${projectName}`, () => {
@@ -163,7 +163,7 @@ inquirer.prompt(questions).then((answers) => {
       }
 
       if (answers.infura_setup) {
-        buf = buf.replace(/_infura_api_key_placeholder_/g, answers.infura_api_key);
+        buf = buf.replace(/_infura_project_id_placeholder_/g, answers.infura_project_id);
       }
 
       fs.writeFile(`${projectName}/.env`, buf, (error) => {
@@ -213,7 +213,7 @@ inquirer.prompt(questions).then((answers) => {
         }
 
         console.log('Installing packages. This might take a couple of minutes.');
-        console.log(`Installing ${chalk.blue('dotenv')} and ${chalk.blue('truffle-hdwallet-provider')}...\n`);
+        console.log(`Installing ${chalk.blue('dotenv')}, ${chalk.blue('truffle-hdwallet-provider')} and ${chalk.blue('web3')}...\n`);
 
         cmd.get(`
           cd ${projectName}
@@ -221,8 +221,7 @@ inquirer.prompt(questions).then((answers) => {
         `, (cmdError, res, stderr) => {
           console.log(res);
 
-          console.log(`Success! Created ${chalk.green(projectName)} at ${chalk.green(projectDirectory)}.\n`);
-          console.log(`Go to the ${chalk.green(projectName)} project directory with ${chalk.magenta(`cd ${projectName}`)}!`);
+          console.log(`Success! You can go to the ${chalk.green(projectName)} project directory with ${chalk.magenta(`cd ${projectName}`)}!`);
           console.log('Inside this directory, you can run commands like:\n');
           console.log(`${chalk.magenta('npm install openzeppelin-solidity')}\nTo install a package...\n\n`);
           console.log(`${chalk.magenta('truffle test')}\nTo test your dapp...\n\n`);
