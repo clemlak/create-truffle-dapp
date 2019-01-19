@@ -21,7 +21,7 @@ const questions = [
   {
     type: 'confirm',
     name: 'infura_setup',
-    message: 'Do you want to use an Infura project ID?',
+    message: 'Do you want to set an Infura project ID?',
   }, {
     type: 'input',
     name: 'infura_project_id',
@@ -53,7 +53,7 @@ console.log(`\nWelcome to ${chalk.blue('create-truffle-dapp')}!\n`);
 
 /* We ask the questions */
 inquirer.prompt(questions).then((answers) => {
-  console.log(`\nCreating ${chalk.green(projectName)} in ${chalk.green(projectDirectory)}.\n`);
+  console.log(`\nCreating ${chalk.green(projectName)} in ${chalk.green(projectDirectory)}...\n`);
 
   /* Creates the folder for the project */
   cmd.get(`mkdir ${projectName}`, () => {
@@ -221,8 +221,7 @@ inquirer.prompt(questions).then((answers) => {
         `, (cmdError, res, stderr) => {
           console.log(res);
 
-          console.log(`Success! Created ${chalk.green(projectName)} at ${chalk.green(projectDirectory)}.\n`);
-          console.log(`Go to the ${chalk.green(projectName)} project directory with ${chalk.magenta(`cd ${projectName}`)}!`);
+          console.log(`Success! You can go to the ${chalk.green(projectName)} project directory with ${chalk.magenta(`cd ${projectName}`)}!`);
           console.log('Inside this directory, you can run commands like:\n');
           console.log(`${chalk.magenta('npm install openzeppelin-solidity')}\nTo install a package...\n\n`);
           console.log(`${chalk.magenta('truffle test')}\nTo test your dapp...\n\n`);
