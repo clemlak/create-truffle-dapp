@@ -2,12 +2,11 @@
 
 ## Introduction
 
-The goal of Create Truffle Dapp is to allow developers to create and deploy Truffle projects with no configuration. Create Truffle Dapp will:
+The goal of Create Truffle Dapp is to help developers create and deploy Truffle projects with no configuration. Create Truffle Dapp will:
 
  - Create your Truffle project, with a template contract, a test file and the corresponding migrations files
  - Create a ready-to-use deployment file using your [Infura](https://infura.io/) project ID and a wallet mnemonic
-
-*A Solidity linter ([Solhint](https://github.com/protofire/solhint) or [Solium](https://github.com/duaraghav8/Solium)) configuration file can also be created.*
+ - Also, a Solidity linter (such as [Solhint](https://github.com/protofire/solhint) or [Solium](https://github.com/duaraghav8/Solium)) configuration file can also be created.
 
 Create Truffle Dapp should work on Windows, Macos and Linux. Please [open an issue](https://github.com/clemlak/create-truffle-dapp/issues/new) if something doesn't work.
 
@@ -20,10 +19,10 @@ Install Create Truffle Dapp globally with:
 
     npm install -g create-truffle-dapp
 
-*Some users may need to start this command with `sudo` and enter their password.*
+*Some users (using macOS) may need to start this command with `sudo` and enter their password.*
 
 ## Usage
-To create a new project in the current directory, simply run:
+To create a new project in the current directory, launch your terminal and run:
 
     create-truffle-dapp MyDapp
 
@@ -35,15 +34,15 @@ Once the installation is done, you can open your project with:
 cd MyDapp
 ```
 
-Then you will be able to run any commands like `npm install openzeppelin-solidity`, `truffle test`, `truffle compile`.
+Then, you will be able to run any command like `npm install openzeppelin-solidity`, `truffle test` or `truffle compile`.
 
-Once you are done with your code, simply run `truffle migrate --network rinkeby` (or any network) to deploy it!
+Once you are done with your code, simply run `truffle migrate --network rinkeby` (or any network) to deploy your dapp! Currently, gateways for Ropsten, Rinkeby, Goerli, Mainnet, Poa and Sokol are already implemented!
 
-*Warning: Please double-check the gas amount and the gas price in the `truffle.js` file before any deployment!*
+*Warning: Please always double-check the gas amount and the gas price in the `truffle.js` file before any deployment!*
 
 ## Contribute
 
-If you want to add something to Create Truffle Dapp, don't hesitate to [create a new issue](https://github.com/clemlak/create-truffle-dapp/issues/new)!
+If you want to contribute, don't hesitate to [create a new issue](https://github.com/clemlak/create-truffle-dapp/issues/new)!
 
 ## License
 
